@@ -1,4 +1,5 @@
 <?php
+
 // Database configuration
 $host = "localhost";
 $dbname = "dre_stays";

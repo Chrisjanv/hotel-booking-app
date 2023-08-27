@@ -21,7 +21,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bindParam(':email', $email);
         $stmt->execute();
 
-        $message = "Registration successful!";
+        // Set a session variable to indicate successful registration
+        $_SESSION['registrationSuccess'] = true;
+
+        // Redirect to index.php
+        header('Location: ../../index.php');
+        exit();
     } catch (PDOException $e) {
         $message = "Error: " . $e->getMessage();
     }
