@@ -51,11 +51,9 @@ try {
             echo '<a href="src/php/bookings.php" class="btn btn-primary">Bookings</a>';
             echo '<a href="src/php/profile.php" class="btn btn-primary ">Profile</a>';
             echo '</div>';
-        } 
-        else {
+        } else {
             echo '<div class="text-center">';
             echo '<a href="src/php/register.php" class="btn btn-primary">Register</a>';
-            echo '</div>';
         }
         // Display login button if not logged in
         if (!$isLoggedIn) {
@@ -70,6 +68,7 @@ try {
         <div class="row mt-4">
             <?php
             // Display hotel data
+// Display hotel data
             foreach ($hotels as $hotel) {
                 echo '<div class="col-md-4 mb-3">';
                 echo '<div class="card">';
@@ -81,6 +80,7 @@ try {
                 echo '</div>';
                 echo '</div>';
             }
+
             ?>
         </div>
 
