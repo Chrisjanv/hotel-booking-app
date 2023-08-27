@@ -40,12 +40,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <!-- Include any necessary CSS here -->
+    <!-- Include here -->
 </head>
 
 <body>
     <h1>Register</h1>
-
+    <script>alert("Please login after registering.")</script>
     <?php echo $message; ?>
 
     <form action="" method="POST">

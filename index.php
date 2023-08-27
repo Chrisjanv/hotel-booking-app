@@ -9,7 +9,7 @@ $isLoggedIn = isset($_SESSION['user_id']);
 // Check for successful registration and clear the session variable
 if (isset($_SESSION['registration_success'])) {
     $registrationSuccess = true;
-    unset($_SESSION['registration_success']);
+    // unset($_SESSION['registration_success']);
 } else {
     $registrationSuccess = false;
 }
@@ -46,11 +46,17 @@ try {
         <h1>Dre's Stays</h1>
         <?php
         // Display different buttons based on login status and registration success
-        if ($registrationSuccess) {
+        if ($isLoggedIn) {
             echo '<a href="src/php/bookings.php" class="btn btn-primary">Bookings</a>';
             echo '<a href="src/php/profile.php" class="btn btn-primary">Profile</a>';
+        } elseif ($registrationSuccess) {
+            echo '<div class="alert alert-success">Registration successful! Please log in.</div>';
         } else {
             echo '<a href="src/php/register.php" class="btn btn-primary">Register</a>';
+        }
+        // Display login button if not logged in
+        if (!$isLoggedIn) {
+            echo '<a href="src/php/login.php" class="btn btn-primary">Login</a>';
         }
         ?>
     </header>
