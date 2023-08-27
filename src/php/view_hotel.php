@@ -14,12 +14,13 @@ if (isset($_GET['hotel_id'])) {
 try {
     $query = "SELECT * FROM hotels WHERE id = :hotelId";
     $stmt = $db->prepare($query);
-    $stmt->bindParam(':hotelId', $hotelId, PDO::PARAM_INT);
+    $stmt->bindParam(':hotelId', $hotelId);
     $stmt->execute();
     $hotel = $stmt->fetch(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
     die("Error retrieving hotel details: " . $e->getMessage());
 }
+
 ?>
 
 <!DOCTYPE html>
