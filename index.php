@@ -49,9 +49,8 @@ try {
         if ($isLoggedIn) {
             echo '<a href="src/php/bookings.php" class="btn btn-primary">Bookings</a>';
             echo '<a href="src/php/profile.php" class="btn btn-primary">Profile</a>';
-        } elseif ($registrationSuccess) {
-            echo '<div class="alert alert-success">Registration successful! Please log in.</div>';
-        } else {
+        } 
+        else {
             echo '<a href="src/php/register.php" class="btn btn-primary">Register</a>';
         }
         // Display login button if not logged in
