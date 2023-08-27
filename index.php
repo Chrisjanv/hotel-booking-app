@@ -46,7 +46,7 @@ try {
             echo '<div class="card-body">';
             echo '<h5 class="card-title">' . $hotel["name"] . '</h5>';
             echo '<p class="card-text">' . $hotel["features"] . '</p>';
-            echo '<a href="#" class="btn btn-primary">View Hotel</a>';
+            echo '<a href="src/php/view_hotel.php?hotel_id=' . $hotel["id"] . '" class="btn btn-primary">View Hotel</a>';
             echo '</div>';
             echo '</div>';
             echo '</div>';
