@@ -33,6 +33,17 @@ try {
 <body>
     <header>
     <h1 id="">Dre's Stays</h1>
+
+            <?php
+            // Display different buttons based on login status
+            if ($isLoggedIn) {
+                echo '<a href="src/php/bookings.php" class="btn btn-primary">Bookings</a>';
+                echo '<a href="src/php/profile.php" class="btn btn-primary">Profile</a>';
+            } else {
+                echo '<a href="src/php/register.php" class="btn btn-primary">Register</a>';
+            }
+            ?>
+            
     </header>
 
 
