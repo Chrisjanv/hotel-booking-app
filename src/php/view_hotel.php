@@ -22,7 +22,6 @@ try {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,9 +43,12 @@ try {
         <?php
         // Display hotel details
         echo '<h2>' . $hotel["name"] . '</h2>';
-        echo '<img src="' . $hotel["image_url"] . '" alt="' . $hotel["name"] . '">';
-        echo '<p>' . $hotel["description"] . '</p>';
-        echo '<a href="../../index.php" class="btn btn-primary">Home</a>';
+        echo '<img src="' . $hotel["thumbnail"] . '" alt="' . $hotel["name"] . '">';
+        echo '<p><strong>Price per Night:</strong> ' . $hotel["pricePerNight"] . '</p>';
+        echo '<p><strong>Type:</strong> ' . $hotel["type"] . '</p>';
+        echo '<p><strong>Rating:</strong> ' . $hotel["rating"] . '</p>';
+        echo '<p><strong>Address:</strong> ' . $hotel["address"] . '</p>';
+        echo '<p><a href="../../index.php" class="btn btn-primary">Home</a></p>';
         ?>
     </div>
 

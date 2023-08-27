@@ -43,19 +43,25 @@ try {
 
 <body>
     <header>
-        <h1>Dre's Stays</h1>
+        <h1 class="text-center m-4">Dre's Stays</h1>
         <?php
         // Display different buttons based on login status and registration success
         if ($isLoggedIn) {
+            echo '<div class="text-center">';
             echo '<a href="src/php/bookings.php" class="btn btn-primary">Bookings</a>';
-            echo '<a href="src/php/profile.php" class="btn btn-primary">Profile</a>';
+            echo '<a href="src/php/profile.php" class="btn btn-primary ">Profile</a>';
+            echo '</div>';
         } 
         else {
+            echo '<div class="text-center">';
             echo '<a href="src/php/register.php" class="btn btn-primary">Register</a>';
+            echo '</div>';
         }
         // Display login button if not logged in
         if (!$isLoggedIn) {
+            echo '<div class="text-center">';
             echo '<a href="src/php/login.php" class="btn btn-primary">Login</a>';
+            echo '</div>';
         }
         ?>
     </header>
@@ -67,9 +73,9 @@ try {
             foreach ($hotels as $hotel) {
                 echo '<div class="col-md-4 mb-3">';
                 echo '<div class="card">';
+                echo '<img src="' . $hotel["thumbnail"] . '" alt="' . $hotel["name"] . '">';
                 echo '<div class="card-body">';
                 echo '<h5 class="card-title">' . $hotel["name"] . '</h5>';
-                echo '<p class="card-text">' . $hotel["features"] . '</p>';
                 echo '<a href="src/php/view_hotel.php?hotel_id=' . $hotel["id"] . '" class="btn btn-primary">View Hotel</a>';
                 echo '</div>';
                 echo '</div>';
