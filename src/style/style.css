@@ -1,7 +1,8 @@
-*{box-sizing: border-box;
-}    
+* {
+    box-sizing: border-box;
+}
 
 
-.btn{
- margin: 1rem !important;
+.btn {
+    margin: 1rem !important;
 }
