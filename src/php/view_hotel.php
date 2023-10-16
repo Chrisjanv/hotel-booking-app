@@ -50,6 +50,7 @@ try {
         echo '<p><strong>Rating:</strong> ' . $hotel["rating"] . '</p>';
         echo '<p><strong>Address:</strong> ' . $hotel["address"] . '</p>';
         echo '<p><a href="../../index.php" class="btn btn-primary">Home</a></p>';
+        echo '<p><a href="../../index.php" class="btn btn-primary" id="bookNow">Book now</a></p>';
         ?>
     </div>
 
